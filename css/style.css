@@ -1438,13 +1438,16 @@ li.fancybox-thumbs-loading {
 
 .navigation {
 	padding: 50px 0 10px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 
-.navigation::after {
+/* .navigation::after {
 	content: '';
 	display: table;
 	clear: both;
-}
+} */
 
 .navigation a {
 	border: 1px solid #73AD9B;
@@ -1453,14 +1456,14 @@ li.fancybox-thumbs-loading {
 	text-decoration: none;
 	display: inline-block;
 	text-transform: uppercase;
-	float: right;
+	/* float: right; */
 	max-width: 45%;
 	transition: all 0.5s;
 }
 
-.navigation a:first-child {
+/* .navigation a:first-child {
 	float: left;
-}
+} */
 
 .navigation a:hover {
 	color: #fff;
@@ -2218,8 +2221,7 @@ p.add a:hover {
 		width: auto;
 	}
 	/* навігаційні кнопки */
-	.navigation a,
-	.navigation a:first-child {
+	.navigation a{
 		display: block;
 		float: none;
 		max-width: 100%;
