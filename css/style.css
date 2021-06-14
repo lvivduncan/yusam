@@ -1044,11 +1044,19 @@ li.fancybox-thumbs-loading {
 /* подпись */
 
 #main_photo .signature {
-	position: absolute;
+/* 	position: absolute;
 	top: 200px;
 	width: 100%;
 	text-align: center;
+	z-index: 2; */
+
+	position: absolute;
+	text-align: center;
+	overflow: hidden;
 	z-index: 2;
+	bottom: 10%;
+	left: calc(50% - 200px);
+
 }
 
 #main_photo .signature img {
@@ -1290,12 +1298,20 @@ li.fancybox-thumbs-loading {
 	padding: 0 0 10px;
 	color: #73ad9b;
 	font-style: normal;
+	display: flex;
+	align-items: center;
 }
 
 #article time {
 	padding: 0 0 30px;
 	color: #73ad9b;
 	display: block;
+	display: flex;
+	align-items: center;
+}
+
+#article time svg{
+	margin: 0 4px
 }
 
 
