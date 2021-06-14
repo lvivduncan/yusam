@@ -3,14 +3,14 @@
 
 /* font-family: 'Open Sans', sans-serif; */
 
-@font-face {
+/* @font-face {
 	font-family: 'TwinMarker';
 	src: url('../fonts/TwinMarker.eot');
 	src: url('../fonts/TwinMarker.eot?#iefix') format('embedded-opentype'), url('../fonts/TwinMarker.woff') format('woff'), url('../fonts/TwinMarker.ttf') format('truetype'), url('../fonts/TwinMarker.svg#TwinMarker') format('svg');
 	;
 	font-weight: normal;
 	font-style: normal;
-}
+} */
 
 
 html {
@@ -1059,7 +1059,7 @@ li.fancybox-thumbs-loading {
 
 /* текст */
 
-#main_photo .text {
+/* #main_photo .text {
 	position: absolute;
 	bottom: 100px;
 	padding: 0 200px;
@@ -1085,7 +1085,7 @@ li.fancybox-thumbs-loading {
 #main_photo .text a {
 	color: rgba(255, 255, 255, 1);
 	text-decoration: none;
-}
+} */
 
 .title {
 	font-size: 1.2rem;
@@ -1633,18 +1633,28 @@ li.fancybox-thumbs-loading {
     display: grid;
     grid-template-columns: repeat(2,1fr) 2fr;
     grid-template-areas: 'block-1 block-2 block-3' 'block-4 block-5 block-3';
-    height: 600px;
+    /* height: 600px; */
     background: #3C2C47;
+}
+
+@media(max-width:776px) {
+	#blocks{
+		grid-template-columns: 1fr;
+		grid-template-areas: 'block-1' 'block-2' 'block-3' 'block-4' 'block-5';
+	}
 }
 
 .block{
 	text-align: center;
 	overflow: hidden;
     min-height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* flex-flow: column; */
+	position: relative;
+}
+
+@media(max-width:776px) {
+	.block{
+		min-height: 200px;
+	}
 }
 
 .block:nth-child(1){
@@ -1663,26 +1673,33 @@ li.fancybox-thumbs-loading {
     grid-area: block-5;
 }
 
-.block a{
-	position: relative;
-	/* height: 300px; */
-	display: block;
-	background: #6c0c0c;    
+.block a {
+    position: relative;
+    /* height: 300px; */
+    /* display: block; */
+    background: #6c0c0c;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
 }
 
 
 /* картинка з ефектом */
 
 #blocks a img {
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	z-index: 1;
-	opacity: 0.95;
-	width: 100%;
-	transition: all 0.3s;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0.95;
+    width: 100%;
+    transition: all 0.3s;
+    height: 100%;
+    object-fit: cover;
 }
 
 #blocks a:hover img {
@@ -2030,9 +2047,15 @@ p.add a:hover {
 	left: auto;
 }
 
-/* #social.footer-social a {
-	font-size: 2rem;
+#social.footer-social a{
+	margin: 0 12px
 }
+
+#social.footer-social a svg{
+	transform: scale(1.4);
+}
+
+/* 
 
 #social.footer-social a:hover {
 	font-size: 2.8rem;
@@ -2104,7 +2127,7 @@ p.add a:hover {
 }
 
 @media(max-width: 776px) {
-	#slides .text {
+/* 	#slides .text {
 		display: none;
 	}
 	#slides .text h1 {
@@ -2112,7 +2135,7 @@ p.add a:hover {
 	}
 	#slides .text p {
 		display: none
-	}
+	} */
 	#main_bio {
 		padding: 50px 20px;
 	}
