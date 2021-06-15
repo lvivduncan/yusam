@@ -1452,7 +1452,7 @@ li.fancybox-thumbs-loading {
 .navigation a {
 	border: 1px solid #73AD9B;
 	padding: 10px;
-	color: #73AD9B;
+	color: #73AD9B!important;
 	text-decoration: none;
 	display: inline-block;
 	text-transform: uppercase;
@@ -1479,13 +1479,14 @@ li.fancybox-thumbs-loading {
 
 .pagination li a {
 	background: #fff;
-	color: #73AD9B;
+	color: #73AD9B!important;
+	transition: .5s;
 }
 
 .pagination li a:hover,
 .pagination .active {
 	background: #73AD9B;
-	color: #fff;
+	color: #fff!important;
 }
 
 
@@ -2223,7 +2224,7 @@ p.add a:hover {
 	/* навігаційні кнопки */
 	.navigation a{
 		display: block;
-		float: none;
+		/* float: none; */
 		max-width: 100%;
 		margin: 0 0 20px;
 	}
