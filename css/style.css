@@ -995,7 +995,6 @@ li.fancybox-thumbs-loading {
 		animation-timing-function: ease-out;
 	}
 	17% {
-		/* opacity: 1; */
 		transform: scale(1.1) rotate(3deg);
 	}
 	25% {
